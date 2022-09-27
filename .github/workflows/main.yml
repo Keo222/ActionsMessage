@@ -13,7 +13,7 @@ jobs:
 
       # Update Message
       - name: Update Message
-        run: echo '"message = ${{ github.event.issue.title }}"' >> message.js
+        run: echo 'message = "${{ github.event.issue.title }}"' >> message.js
 
       # Add, commit, and push changes
       - name: Run a multi-line script
