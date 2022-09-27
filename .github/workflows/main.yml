@@ -1,0 +1,25 @@
+name: Update Message
+
+on:
+  pull_request:
+    branches: [opened]
+  
+jobs:
+  update-message:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Update Message
+      - name: Update Message
+        run: echo "message = ${{ github.event.pull_request.title }}" >> message.js
+
+      # Add, commit, and push changes
+      - name: Run a multi-line script
+        run: |
+          git config --global user.name "Keo222"
+          git config --global user.email "kyle.olsen222@gmail.com"
+          git add message.js
+          git commit -m "${{ github.actor }} updated message"
+          git push
