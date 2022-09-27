@@ -3,7 +3,7 @@ name: Update Message
 on:
   issues:
     types: [opened]
-  
+
 jobs:
   update-message:
     runs-on: ubuntu-latest
@@ -13,7 +13,10 @@ jobs:
 
       # Update Message
       - name: Update Message
-        run: echo 'message = "${{ github.event.issue.title }}"' >> message.js
+
+        run: |
+          msg = ${{ github.event.issue.title }} | tr -d '"'
+          echo 'message = "$msg"' >> message.js
 
       # Add, commit, and push changes
       - name: Run a multi-line script
