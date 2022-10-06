@@ -15,10 +15,11 @@ jobs:
       - name: Update Message
 
         run: |
-          echo 'message = "${{ github.event.issue.title }}"' >> message.js
+          SANITIZED=${${{ github.event.issue.title }}//\"/}
+          echo 'message = "${SANITIZED}"' >> message.js
 
       # Add, commit, and push changes
-      - name: Run a multi-line script
+      - name: Add changes and push to deployment
         run: |
           git config --global user.name "Keo222"
           git config --global user.email "kyle.olsen222@gmail.com"
