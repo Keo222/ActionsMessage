@@ -10,3 +10,4 @@ message = "test\\\\";
 message = "$SANITIZED";
 message = "$SANITIZED";
 message = "test again"
+message = "quote two";
