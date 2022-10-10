@@ -15,7 +15,7 @@ jobs:
       - name: Update Message
         run: |
           SANITIZED=`echo ${{github.event.issue.title}} | tr -d '"'`
-          echo message = '"' ${SANITIZED} '"'' >> message.js
+          echo "message = \"${SANITIZED}\"" >> message.js
 
       # Add, commit, and push changes
       - name: Add changes and push to deployment
