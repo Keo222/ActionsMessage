@@ -12,3 +12,4 @@ message = "$SANITIZED";
 message = "test again"
 message = "quote two";
 message = "te\bst\n\t";
+message = "test backslash";
