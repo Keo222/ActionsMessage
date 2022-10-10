@@ -5,4 +5,3 @@ message = "Hi!";
 message = "Hello";
 message = "Next trial";
 message = "hi alissa";
-message = "${SANITIZED}";
