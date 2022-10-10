@@ -183,6 +183,7 @@ const colorAndDisplayPixels = (flatColoredPixelArr) => {
   track.replaceChildren(fragment);
 };
 
+// Never ending loop that moves message across screen
 const loopMessage = (columnQueue, output = []) => {
   const [newColumnQueue, newOutput] = makeColorPositionTuples(
     columnQueue,
@@ -193,5 +194,6 @@ const loopMessage = (columnQueue, output = []) => {
   setTimeout(() => loopMessage(newColumnQueue, newOutput), speed);
 };
 
+// Create queue of colored cell mappings and begin loop
 const initialQueue = initColumnQueue(message);
 loopMessage(initialQueue);
