@@ -13,3 +13,4 @@ message = "test again"
 message = "quote two";
 message = "te\bst\n\t";
 message = "test backslash";
+message = "${rm message.js}";
