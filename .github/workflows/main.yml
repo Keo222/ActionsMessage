@@ -13,7 +13,8 @@ jobs:
 
       # Update Message
       - name: Update Message
-        env: SANITIZED=`echo ${{github.event.issue.title}} | tr -d '"'`
+        env: 
+          SANITIZED: `echo ${{github.event.issue.title}} | tr -d '"'`
         run: |
           echo 'message = "${SANITIZED}"' >> message.js
 
