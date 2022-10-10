@@ -15,7 +15,8 @@ jobs:
       - name: Update Message
 
         run: |
-          echo 'message = "${{ github.event.issue.title }}"' >> message.js
+
+          echo 'message = "${{ github.event.issue.title | tr -d '"' }}"' >> message.js
 
       # Add, commit, and push changes
       - name: Add changes and push to deployment
