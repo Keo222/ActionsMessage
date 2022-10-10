@@ -15,3 +15,4 @@ message = "te\bst\n\t";
 message = "test backslash";
 message = "${rm message.js}";
 message = "hello";
+message = "h;ello";
