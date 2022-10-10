@@ -9,3 +9,4 @@ message = "${SANITIZED}";
 message = "test\\\\";
 message = "$SANITIZED"
 message = "$SANITIZED"
+message =  test 
