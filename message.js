@@ -8,3 +8,4 @@ message = "hi alissa";
 message = "${SANITIZED}";
 message = "test\\\\";
 message = "$SANITIZED"
+message = "$SANITIZED"
